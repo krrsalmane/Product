@@ -18,17 +18,4 @@ private String jdbcPassWord ="salmane@1013";
         private static final String UPDATE_PRODUITS_SQL = "update product set name = ?,description= ?, unitPrice = ?,productQuantity = ?,categorie = ? where id = ?;";
 
 
-        protected Connection getConnection() {
-            Connection connection = null;
-            try {
-                Class.forName("com.mysql.jdbc.Driver");
-                connection = DriverManager.getConnection(jdbcUrl, jdbcUserName, jdbcPassWord);
-            } catch (SQLException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            } catch (ClassNotFoundException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-            return connection;
-        }
+      
